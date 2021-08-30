@@ -2,20 +2,8 @@
 
 namespace App\Models;
 
-use Illuminate\Notifications\Notifiable;
-use Illuminate\Foundation\Auth\User as Authenticatable;
 
-class Supervisor extends Authenticatable
+class Supervisor extends BaseAuthenticatable
 {
-    use Notifiable;
-
     protected $guard = 'supervisor';
-
-    protected $fillable = [
-        'name', 'email', 'password',
-    ];
-
-    protected $hidden = [
-        'password', 'remember_token',
-    ];
 }
